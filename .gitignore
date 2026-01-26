@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Generated output (keep out/ via .gitkeep)
+out/*
+!out/.gitkeep
+
+# Built microbenchmarks
+benchmarks/micro/icache_footprint
+benchmarks/micro/dcache_stride
+benchmarks/micro/pointer_chase
+benchmarks/micro/branchy
