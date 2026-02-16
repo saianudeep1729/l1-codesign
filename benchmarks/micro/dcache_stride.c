@@ -19,10 +19,10 @@ int main(int argc, char** argv) {
     size_t bytes = (argc > 1) ? (size_t)strtoull(argv[1], 0, 10) : (256ull * 1024); // 256KB
     size_t stride = (argc > 2) ? (size_t)strtoull(argv[2], 0, 10) : 64;             // 64B
     size_t passes = (argc > 3) ? (size_t)strtoull(argv[3], 0, 10) : 2000;
-
+    printf("bytes: %zu, stride: %zu, passes: %zu\n", bytes, stride, passes);
     if (stride == 0) stride = 64;
     if (bytes < stride * 2) bytes = stride * 2;
-
+    printf("bytes: %zu, stride: %zu, passes: %zu\n", bytes, stride, passes);
     // aligned alloc
     const size_t align = 64;
     uint8_t* base = NULL;
